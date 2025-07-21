@@ -125,43 +125,41 @@
         class="bg-gradient-to-r from-white via-indigo-500/5 to-white shadow-lg backdrop-blur-sm dark:from-gray-900 dark:via-violet-500/20 dark:to-gray-900 fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <!-- Logo Section -->
-            <div class="flex w-[75%] lg:w-[25%] items-center gap-2 animate-slide-left">
-                <img src="images/logo-tr.png" alt="Digital Dash Logo" class="h-8 w-auto">
-                <img src="images/txt-tr.png" alt="Digital Dash Logo" class="h-5 w-auto ml-2">
-
-
+            <div class="flex w-[75%] lg:w-[25%] items-center gap-2 animate-slide-left min-w-0">
+                <img src="images/logo-tr.png" alt="Digital Dash Logo" class="h-8 w-auto min-w-0">
+                <img src="images/txt-tr.png" alt="Digital Dash Logo" class="h-5 w-auto ml-2 min-w-0">
             </div>
 
             <!-- Desktop/Tablet Navigation -->
-            <div class="hidden md:flex lg:w-[40%]  items-center gap-4 lg:gap-6">
+            <div class="hidden md:flex lg:w-[40%] items-center gap-4 lg:gap-6 flex-shrink-0">
                 <a href="#home"
                     class="font-montserrat text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-cyan-custom transition-colors animate-slide-top delay-100 relative group">
                     <span>Home</span>
                     <span
                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-violet-500 transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="#featured"
-                    class="font-montserrat   text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-cyan-custom transition-colors animate-slide-top delay-200 relative group">
-                    <span>Featured</span>
-                    <span
-                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-violet-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a href="#stats"
-                    class="font-montserrat text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-cyan-custom transition-colors animate-slide-top delay-300 relative group">
-                    <span>Categories</span>
-                    <span
-                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-violet-500 transition-all duration-300 group-hover:w-full"></span>
-                </a>
                 <a href="#about"
-                    class="font-montserrat text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-cyan-custom transition-colors animate-slide-top delay-400 relative group">
+                    class="font-montserrat text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-cyan-custom transition-colors animate-slide-top delay-200 relative group">
                     <span>About</span>
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-violet-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#services"
+                    class="font-montserrat text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-cyan-custom transition-colors animate-slide-top delay-300 relative group">
+                    <span>Services</span>
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-violet-500 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#mission"
+                    class="font-montserrat text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-cyan-custom transition-colors animate-slide-top delay-400 relative group">
+                    <span>Mission</span>
                     <span
                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-600 to-violet-500 transition-all duration-300 group-hover:w-full"></span>
                 </a>
             </div>
 
             <!-- Theme Toggle & CTA -->
-            <div class="flex items-center gap-2 sm:gap-4 animate-slide-right">
+            <div class="flex items-center gap-2 sm:gap-4 animate-slide-right flex-shrink-0">
                 <button id="themeToggle"
                     class="hidden text-gray-600 hover:text-indigo-600 dark:text-gray-400 dark:hover:text-violet-500"
                     aria-label="Toggle theme">
@@ -176,7 +174,7 @@
 
             <!-- Mobile Menu Button -->
             <button id="mobileMenuBtn" class="ml-5 md:hidden text-gray-600 hover:text-indigo-600 dark:text-gray-400"
-                aria-label="Toggle menu">
+                aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path class="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M4 6h16M4 12h16M4 18h16" />
@@ -187,16 +185,20 @@
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <div id="mobileMenu" class="hidden md:hidden">
-            <div class="px-4 py-3 space-y-0 bg-white dark:bg-gray-900 border-t dark:border-gray-800">
+        <div id="mobileMenu"
+            class="hidden md:hidden absolute w-full left-0 top-full bg-white dark:bg-gray-900 border-t dark:border-gray-800 shadow-lg z-50">
+            <div class="px-4 py-3 space-y-0">
                 <a href="#home"
-                    class="block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-violet-500 transition-colors py-3 border-b border-gray-200 dark:border-gray-700">Home</a>
+                    class="block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-violet-500 transition-colors py-4 border-b border-gray-200 dark:border-gray-700 text-lg">Home</a>
                 <a href="#featured"
-                    class="block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-violet-500 transition-colors py-3 border-b border-gray-200 dark:border-gray-700">Featured</a>
-                <a href="#categories"
-                    class="block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-violet-500 transition-colors py-3 border-b border-gray-200 dark:border-gray-700">Categories</a>
+                    class="block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-violet-500 transition-colors py-4 border-b border-gray-200 dark:border-gray-700 text-lg">Featured</a>
+                <a href="#stats"
+                    class="block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-violet-500 transition-colors py-4 border-b border-gray-200 dark:border-gray-700 text-lg">Categories</a>
                 <a href="#about"
-                    class="block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-violet-500 transition-colors py-3">About</a>
+                    class="block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-violet-500 transition-colors py-4 text-lg">About</a>
+                <a href="#contact"
+                    class="block text-indigo-600 dark:text-cyan-custom font-semibold transition-colors py-4 text-lg">Contact
+                    Us</a>
             </div>
         </div>
     </nav>
@@ -242,27 +244,17 @@
             <div class="flex flex-col md:flex-row md:items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 transition-all duration-1000 transform translate-x-neg transition-transform"
                     id="hero-text">
-                    <span
-                        class="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-sm font-medium mb-4 transform hover:scale-105 transition-transform font-montserrat">
-                        <span class="flex items-center">
-                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                            </svg>
-                            Available for freelance work
-                        </span>
-                    </span>
 
                     <h1 class="text-4xl md:text-6xl text-gray-300 font-bold mb-4 leading-tight font-montserrat">
-                        Creative <span
-                            class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-600">Designer</span>
-                        & <span
-                            class="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-orange-500">Developer</span>
+                        Drive your <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-600">Social
+                            Media</span>
+                        to <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 to-orange-500">Success</span>
                     </h1>
 
                     <p class="text-xl text-gray-600 mb-8 leading-relaxed font-montserrat">
-                        Crafting beautiful digital experiences that engage and inspire.
+                        Creating digital experiences that engage and inspire.
                         <span class="block mt-2 text-sm font-medium text-indigo-600 font-montserrat">
                             <span class="inline-flex items-center">
                                 <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -270,7 +262,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
-                                Bringing ideas to life since 2016
+                                Bringing ideas to life since 2021
                             </span>
                         </span>
                     </p>
@@ -286,7 +278,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
                                 </svg>
-                                View Our Work
+                                Our Services
                             </span>
                         </button>
 
@@ -306,7 +298,7 @@
                     </div>
 
                     <div class="mt-8 flex items-center space-x-4">
-                        <span class="text-sm text-gray-500 font-montserrat">Find me on:</span>
+                        <span class="text-sm text-gray-500 font-montserrat">Find us on:</span>
                         <div class="flex space-x-3">
                             <a href="#"
                                 class="text-gray-400 hover:text-pink-500 transition-colors duration-300 transform hover:scale-110">
@@ -316,14 +308,7 @@
                                         d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913a5.885 5.885 0 001.384 2.126A5.868 5.868 0 004.14 23.37c.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.898 5.898 0 002.126-1.384 5.86 5.86 0 001.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.89 5.89 0 00-1.384-2.126A5.847 5.847 0 0019.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 01-1.379-.899 3.644 3.644 0 01-.9-1.38c-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
                                 </svg>
                             </a>
-                            <a href="#"
-                                class="text-gray-400 hover:text-blue-500 transition-colors duration-300 transform hover:scale-110">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 9.99 9.99 0 01-3.13 1.2 4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z" />
-                                </svg>
-                            </a>
+
                             <a href="#"
                                 class="text-gray-400 hover:text-blue-700 transition-colors duration-300 transform hover:scale-110">
                                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
@@ -561,13 +546,314 @@
 
     <!-- Main Content -->
     <main class="">
-        <!-- Featured Articles Section -->
-        <section id="featured" class="max-w-7xl mx-auto px-4 py-12">
-            <h2
-                class="text-3xl md:text-5xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-cyan-custom">
-                Featured Posts</h2>
-            <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                <!-- Posts will be dynamically inserted here -->
+        <section id="about" class="max-w-7xl mx-auto px-4 py-16">
+            <!-- Main Intro -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 font-montserrat">
+                    <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-cyan-custom dark:to-violet-500">
+                        Elevate Your Digital Presence
+                    </span>
+                </h2>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed font-montserrat">
+                        At <span class="font-semibold text-indigo-600 dark:text-cyan-custom">DigitalDash</span>, we
+                        don't just manage your social media — we elevate your entire digital presence.
+                    </p>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 font-montserrat">
+                        We're a full-service social media management agency that helps brands, businesses, and creators
+                        thrive across every major platform, including:
+                    </p>
+                </div>
+            </div>
+
+            <!-- Platforms Grid -->
+            <div class="mb-16">
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-5xl mx-auto">
+                    <!-- Instagram -->
+                    <div
+                        class="bg-gradient-to-br from-pink-500 to-purple-600 p-4 rounded-2xl text-white text-center transform hover:scale-105 transition-all duration-300 shadow-lg">
+                        <div class="text-2xl mb-2">📸</div>
+                        <div class="text-sm font-semibold font-montserrat">Instagram</div>
+                    </div>
+                    <!-- Facebook -->
+                    <div
+                        class="bg-gradient-to-br from-blue-600 to-blue-700 p-4 rounded-2xl text-white text-center transform hover:scale-105 transition-all duration-300 shadow-lg">
+                        <div class="text-2xl mb-2">👤</div>
+                        <div class="text-sm font-semibold font-montserrat">Facebook</div>
+                    </div>
+                    <!-- TikTok -->
+                    <div
+                        class="bg-gradient-to-br from-black to-gray-800 p-4 rounded-2xl text-white text-center transform hover:scale-105 transition-all duration-300 shadow-lg">
+                        <div class="text-2xl mb-2">🎵</div>
+                        <div class="text-sm font-semibold font-montserrat">TikTok</div>
+                    </div>
+                    <!-- Twitter/X -->
+                    <div
+                        class="bg-gradient-to-br from-gray-900 to-black p-4 rounded-2xl text-white text-center transform hover:scale-105 transition-all duration-300 shadow-lg">
+                        <div class="text-2xl mb-2">✕</div>
+                        <div class="text-sm font-semibold font-montserrat">Twitter (X)</div>
+                    </div>
+                    <!-- LinkedIn -->
+                    <div
+                        class="bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-2xl text-white text-center transform hover:scale-105 transition-all duration-300 shadow-lg">
+                        <div class="text-2xl mb-2">💼</div>
+                        <div class="text-sm font-semibold font-montserrat">LinkedIn</div>
+                    </div>
+                    <!-- Pinterest -->
+                    <div
+                        class="bg-gradient-to-br from-red-500 to-red-600 p-4 rounded-2xl text-white text-center transform hover:scale-105 transition-all duration-300 shadow-lg">
+                        <div class="text-2xl mb-2">📌</div>
+                        <div class="text-sm font-semibold font-montserrat">Pinterest</div>
+                    </div>
+                    <!-- YouTube -->
+                    <div
+                        class="bg-gradient-to-br from-red-600 to-red-700 p-4 rounded-2xl text-white text-center transform hover:scale-105 transition-all duration-300 shadow-lg">
+                        <div class="text-2xl mb-2">📺</div>
+                        <div class="text-sm font-semibold font-montserrat">YouTube</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Description -->
+            <div class="text-center mb-20">
+                <p class="text-lg text-gray-700 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-montserrat">
+                    Our team of digital strategists, creatives, and analysts specialize in building consistent brand
+                    stories, growing engaged communities, and driving real results.
+                </p>
+            </div>
+
+            <!-- What We Do Section -->
+            <div class="mb-20" id="services">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4 font-montserrat">
+                        <span class="text-2xl mr-2">💡</span>
+                        <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-cyan-custom dark:to-violet-500">
+                            What We Do
+                        </span>
+                    </h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Content Creation -->
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 group">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="bg-gradient-to-r from-pink-500 to-purple-600 p-3 rounded-full text-white text-2xl mr-4">
+                                🎥
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-800 dark:text-white font-montserrat">Content
+                                Creation</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-pink-500 pl-4">
+                                <h5 class="font-semibold text-gray-800 dark:text-white mb-2 font-montserrat">Videography
+                                    & Photography</h5>
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">High-quality, on-brand
+                                    content that stops the scroll.</p>
+                            </div>
+                            <div class="border-l-4 border-purple-500 pl-4">
+                                <h5 class="font-semibold text-gray-800 dark:text-white mb-2 font-montserrat">Creative
+                                    Direction</h5>
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">From concept to execution —
+                                    we bring your vision to life.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Management -->
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 group">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="bg-gradient-to-r from-blue-500 to-indigo-600 p-3 rounded-full text-white text-2xl mr-4">
+                                📱
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-800 dark:text-white font-montserrat">Social Media
+                                Management</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">Platform-specific strategies
+                                    tailored to your goals</p>
+                            </div>
+                            <div class="border-l-4 border-indigo-500 pl-4">
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">Scheduling, engagement, and
+                                    performance tracking</p>
+                            </div>
+                            <div class="border-l-4 border-purple-500 pl-4">
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">Community management to keep
+                                    your audience connected</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web & SEO -->
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 group">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="bg-gradient-to-r from-emerald-500 to-teal-600 p-3 rounded-full text-white text-2xl mr-4">
+                                🌐
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-800 dark:text-white font-montserrat">Web & SEO</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-emerald-500 pl-4">
+                                <h5 class="font-semibold text-gray-800 dark:text-white mb-2 font-montserrat">Website
+                                    Design & Development</h5>
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">Sleek, responsive,
+                                    conversion-driven sites</p>
+                            </div>
+                            <div class="border-l-4 border-teal-500 pl-4">
+                                <h5 class="font-semibold text-gray-800 dark:text-white mb-2 font-montserrat">Search
+                                    Engine Optimization (SEO)</h5>
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">Be found when it matters
+                                    most — with keyword strategy, on-page SEO, and analytics-driven growth</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Growth & Strategy -->
+                    <div
+                        class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 group">
+                        <div class="flex items-center mb-6">
+                            <div
+                                class="bg-gradient-to-r from-orange-500 to-red-600 p-3 rounded-full text-white text-2xl mr-4">
+                                📈
+                            </div>
+                            <h4 class="text-2xl font-bold text-gray-800 dark:text-white font-montserrat">Growth &
+                                Strategy</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-orange-500 pl-4">
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">Custom content calendars &
+                                    campaign planning</p>
+                            </div>
+                            <div class="border-l-4 border-red-500 pl-4">
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">Paid advertising (Meta,
+                                    TikTok, Google Ads, etc.)</p>
+                            </div>
+                            <div class="border-l-4 border-pink-500 pl-4">
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">Influencer outreach &
+                                    collaboration strategy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose DigitalDash -->
+            <div class="relative">
+                <!-- Background decoration -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-3xl transform rotate-1 opacity-50">
+                </div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-l from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-3xl transform -rotate-1 opacity-50">
+                </div>
+
+                <div
+                    class="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-12 rounded-3xl shadow-xl border border-indigo-100 dark:border-gray-600">
+                    <div class="text-center mb-10">
+                        <h3 class="text-3xl md:text-4xl font-bold mb-4 font-montserrat">
+                            <span class="text-2xl mr-2">✅</span>
+                            <span
+                                class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-cyan-custom dark:to-violet-500">
+                                Why Choose DigitalDash?
+                            </span>
+                        </h3>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="bg-gradient-to-r from-indigo-500 to-purple-600 p-2 rounded-full text-white flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 dark:text-white mb-2 font-montserrat">One Team
+                                    for All Things Digital</h5>
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">Save time, cut costs, and
+                                    streamline communication</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="bg-gradient-to-r from-indigo-500 to-purple-600 p-2 rounded-full text-white flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 dark:text-white mb-2 font-montserrat">Data-Driven
+                                    Decisions</h5>
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">We don't guess, we test,
+                                    analyze, and optimize</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="bg-gradient-to-r from-indigo-500 to-purple-600 p-2 rounded-full text-white flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 dark:text-white mb-2 font-montserrat">Creativity
+                                    Meets Strategy</h5>
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">Our work doesn't just look
+                                    good; it performs</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="bg-gradient-to-r from-indigo-500 to-purple-600 p-2 rounded-full text-white flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 dark:text-white mb-2 font-montserrat">Flexible
+                                    Plans</h5>
+                                <p class="text-gray-600 dark:text-gray-300 font-montserrat">For businesses of all sizes
+                                    — from startups to established brands</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="text-center mt-12">
+                        <button
+                            class="group relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-cyan-custom dark:to-violet-500 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 font-montserrat transform hover:scale-105">
+                            <span
+                                class="absolute top-0 left-0 w-full h-full bg-white/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
+                            <span class="relative flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                    </path>
+                                </svg>
+                                Get Started Today
+                            </span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -577,80 +863,80 @@
                 <!-- Stats Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center mb-16">
                     <div class="p-6 rounded-xl">
+                        <div class="text-4xl bg-white/10 p-4 rounded-xl font-bold mb-2 font-montserrat">200+</div>
+                        <div class="text-white/80 font-montserrat">Happy Clients</div>
+                    </div>
+                    <div class="p-6 rounded-xl">
                         <div class="text-4xl bg-white/10 p-4 rounded-xl font-bold mb-2 font-montserrat">50K+</div>
-                        <div class="text-white/80 font-montserrat">Active Writers</div>
+                        <div class="text-white/80 font-montserrat">Content Pieces Created</div>
                     </div>
                     <div class="p-6 rounded-xl">
-                        <div class="text-4xl bg-white/10 p-4 rounded-xl font-bold mb-2 font-montserrat">100K+</div>
-                        <div class="text-white/80 font-montserrat">Published Posts</div>
+                        <div class="text-4xl bg-white/10 p-4 rounded-xl font-bold mb-2 font-montserrat">300%</div>
+                        <div class="text-white/80 font-montserrat">Average Engagement Boost</div>
                     </div>
                     <div class="p-6 rounded-xl">
-                        <div class="text-4xl bg-white/10 p-4 rounded-xl font-bold mb-2 font-montserrat">95%</div>
-                        <div class="text-white/80 font-montserrat">User Satisfaction</div>
-                    </div>
-                    <div class="p-6 rounded-xl">
-                        <div class="text-4xl bg-white/10 p-4 rounded-xl font-bold mb-2 font-montserrat">4.8★</div>
-                        <div class="text-white/80 font-montserrat">Average Rating</div>
+                        <div class="text-4xl bg-white/10 p-4 rounded-xl font-bold mb-2 font-montserrat">2M+</div>
+                        <div class="text-white/80 font-montserrat">Followers Gained</div>
                     </div>
                 </div>
 
-                <!-- Featured Writers Section -->
-                <h2 class="text-3xl font-bold text-center mb-12 font-montserrat">Featured Writers</h2>
+                <!-- Client Success Stories Section -->
+                <h2 class="text-3xl font-bold text-center mb-12 font-montserrat">Client Success Stories</h2>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div
                         class="bg-gradient-to-br from-white/40 to-white/20 p-6 rounded-2xl backdrop-blur-sm hover:scale-105 transition-all duration-300 shadow-lg">
                         <div class="flex items-center gap-4 mb-4">
                             <div
                                 class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center text-2xl shadow-inner">
-                                👩
+                                🏪
                             </div>
                             <div>
-                                <div class="font-semibold font-montserrat">Emily Chen</div>
-                                <div class="text-white/90 font-montserrat">Tech & Innovation</div>
+                                <div class="font-semibold font-montserrat">Sarah Mitchell</div>
+                                <div class="text-white/90 font-montserrat">CEO, Bloom Boutique</div>
                             </div>
                         </div>
-                        <p class="text-white/90 font-montserrat">"This platform has given me the perfect space to share
-                            my insights on
-                            emerging technologies and connect with like-minded readers."</p>
+                        <p class="text-white/90 font-montserrat">"Digital Dash transformed our Instagram presence from
+                            500 to 15K followers in just 6 months. Our online sales increased by 400%!"</p>
                     </div>
                     <div
                         class="bg-gradient-to-br from-white/40 to-white/20 p-6 rounded-2xl backdrop-blur-sm hover:scale-105 transition-all duration-300 shadow-lg">
                         <div class="flex items-center gap-4 mb-4">
                             <div
                                 class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center text-2xl shadow-inner">
-                                👨
+                                🏋️
                             </div>
                             <div>
-                                <div class="font-semibold font-montserrat">Marcus Johnson</div>
-                                <div class="text-white/90 font-montserrat">Travel & Culture</div>
+                                <div class="font-semibold font-montserrat">Mike Torres</div>
+                                <div class="text-white/90 font-montserrat">"Their TikTok strategy went viral and brought
+                                    us 200+ new members. The team understands how to create content that converts!"
+                                </div>
                             </div>
                         </div>
-                        <p class="text-white/90 font-montserrat">"I've built an engaged community of travel enthusiasts
-                            who follow my
-                            global adventures and cultural discoveries."</p>
+                        <p class="text-white/90 font-montserrat">"From managing all our platforms to creating
+                            mouth-watering food content, Digital Dash helped us become the most-followed restaurant in
+                            our city."</p>
                     </div>
                     <div
                         class="bg-gradient-to-br from-white/40 to-white/20 p-6 rounded-2xl backdrop-blur-sm hover:scale-105 transition-all duration-300 shadow-lg">
                         <div class="flex items-center gap-4 mb-4">
                             <div
                                 class="w-12 h-12 bg-white/50 rounded-full flex items-center justify-center text-2xl shadow-inner">
-                                👩
+                                🍕
                             </div>
                             <div>
-                                <div class="font-semibold font-montserrat">Sofia Rodriguez</div>
-                                <div class="text-white/90 font-montserrat">Food & Lifestyle</div>
+                                <div class="font-semibold font-montserrat">Maria Gonzalez</div>
+                                <div class="text-white/90 font-montserrat">Owner, Nonna's Kitchen</div>
                             </div>
                         </div>
-                        <p class="text-white/90 font-montserrat">"From recipes to restaurant reviews, I love sharing my
-                            culinary journey
-                            with readers who appreciate good food and great stories."</p>
+                        <p class="text-white/90 font-montserrat">"From managing all our platforms to creating
+                            mouth-watering food content, Digital Dash helped us become the most-followed restaurant in
+                            our city."</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- About Section -->
-        <div id="about" class="bg-gradient-to-b from-white to-indigo-50 dark:from-gray-900 dark:to-gray-800 py-24">
+        <div id="mission" class="bg-gradient-to-b from-white to-indigo-50 dark:from-gray-900 dark:to-gray-800 py-24">
             <div class="max-w-7xl mx-auto px-4">
 
 
@@ -669,18 +955,20 @@
                             Our Mission</div>
                         <h3
                             class="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-500">
-                            Empowering Voices</h3>
+                            Elevating Brands, Empowering Growth
+                        </h3>
                         <p class="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-                            At Blog Platform Pro, we believe in the power of storytelling to connect, inspire, and
-                            transform.
-                            Our mission is to provide writers with the tools they need to share their voices with the
-                            world,
-                            while building meaningful connections with their readers.
+                            At <span class="font-semibold text-indigo-600 dark:text-cyan-custom">Digital Dash</span>,
+                            our mission is to help brands, businesses, and creators stand out in the digital world. We
+                            believe every brand has a unique story, and we're passionate about amplifying your voice
+                            across every major platform.<br><br>
+                            From strategy to content to analytics, we provide the expertise and creative spark you need
+                            to grow your audience, build real connections, and achieve measurable results.
                         </p>
                         <div class="mt-8">
-                            <a href="#"
+                            <a href="#contact"
                                 class="inline-block px-8 py-3 bg-gradient-to-r from-indigo-600 to-violet-500 text-white rounded-full hover:shadow-lg hover:shadow-indigo-500/25 dark:hover:shadow-violet-500/25 transition-all duration-300 transform hover:scale-105">
-                                Join Our Team
+                                Let's Work Together
                             </a>
                         </div>
                     </div>
@@ -811,7 +1099,7 @@
                                     </div>
                                 </div>
 
-                                <h4 class="font-bold text-xl mb-4 text-gray-800">Connect With Me</h4>
+                                <h4 class="font-bold text-xl mb-4 text-gray-800">Connect With Us</h4>
                                 <div class="flex space-x-4">
                                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
                                         class="bg-gray-100 p-3 rounded-full text-gray-600 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-600 hover:text-white transform transition-all duration-300 hover:scale-110">
@@ -1074,6 +1362,25 @@
 
     <script>
 
+        // Update theme function (missing from your code)
+        function updateTheme() {
+            const isDark = document.documentElement.classList.contains('dark');
+
+            // Save theme preference to localStorage
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+            // Update theme icon if needed (optional)
+            const themeIcon = document.getElementById('theme-icon');
+            if (themeIcon) {
+                if (isDark) {
+                    // Moon icon for dark mode
+                    themeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />`;
+                } else {
+                    // Sun icon for light mode
+                    themeIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />`;
+                }
+            }
+        }
 
         // Initialize theme from localStorage
         function initializeTheme() {
@@ -1091,8 +1398,12 @@
             updateTheme();
         }
 
+        // Get both theme toggle buttons
+        const themeToggleFloating = document.getElementById('theme-toggle');
+        const themeToggleNav = document.getElementById('themeToggle');
+
         // Add event listeners to both toggle buttons
-        toggleButton.addEventListener('click', () => {
+        themeToggleFloating.addEventListener('click', () => {
             document.documentElement.classList.toggle('dark');
             updateTheme();
         });
@@ -1119,438 +1430,45 @@
             });
         }
 
-        // Sample blog post data with Unsplash images and full content
-        const posts = [
-            {
-                id: 1,
-                title: "Exploring the Mountains",
-                thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
-                snippet: "A journey through the serene peaks and valleys.",
-                content: `
-                    <p class="mb-6 text-gray-800 dark:text-gray-200">The majestic mountains have always held a special place in the hearts of adventurers and nature enthusiasts. As I stood at the base of the towering peaks, I couldn't help but feel humbled by their sheer magnitude and timeless presence.</p>
-                    
-                    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">The Journey Begins</h2>
-                    <p class="mb-6 text-gray-800 dark:text-gray-200">Our expedition began at dawn, with the first rays of sunlight painting the snow-capped peaks in hues of gold and pink. The crisp mountain air filled our lungs as we started our ascent, each step taking us further from civilization and closer to nature's grand spectacle.</p>
-                    
-                    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Life at High Altitude</h2>
-                    <p class="mb-6 text-gray-800 dark:text-gray-200">At higher elevations, we discovered a world unlike any other. Hardy alpine flowers dotted the rocky terrain, while marmots watched curiously from their rocky outposts. The ecosystem here has adapted to extreme conditions, teaching us lessons about resilience and adaptation.</p>
-                    
-                    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Lessons from the Summit</h2>
-                    <p class="mb-6 text-gray-800 dark:text-gray-200">Reaching the summit wasn't just about the physical achievement. It was a journey of self-discovery, teaching us about our limits, the importance of preparation, and the reward of perseverance. The panoramic views from the top served as a reminder of our small place in this vast world.</p>
-                `,
-                likes: 0,
-                comments: []
-            },
-            {
-                id: 2,
-                title: "City Life Unraveled",
-                thumbnail: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
-                snippet: "The hustle and bustle of urban living.",
-                content: `
-                    <p class="mb-6 text-gray-800 dark:text-gray-200">Urban landscapes are living, breathing entities that tell countless stories through their architecture, people, and daily rhythms. As a city dweller, I've learned to read these stories hidden in plain sight.</p>
-                    
-                    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Morning Rush</h2>
-                    <p class="mb-6 text-gray-800 dark:text-gray-200">The city awakens with a symphony of sounds - subway trains rumbling underground, coffee shop doors swinging open, and the steady stream of footsteps on concrete. Each morning brings a new energy, a fresh start for millions of dreams and aspirations.</p>
-                    
-                    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Urban Architecture</h2>
-                    <p class="mb-6 text-gray-800 dark:text-gray-200">Modern skyscrapers stand shoulder to shoulder with historic buildings, creating a timeline of human achievement in steel and stone. Every facade tells a story of the era it was built in, the people who designed it, and the countless lives that have passed through its doors.</p>
-                    
-                    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Night Life</h2>
-                    <p class="mb-6 text-gray-800 dark:text-gray-200">As day turns to night, the city transforms. Neon lights paint the streets in vibrant colors, while restaurants and bars come alive with conversation and laughter. It's in these moments that the true character of the city reveals itself.</p>
-                `,
-                likes: 0,
-                comments: []
-            },
-            {
-                id: 3,
-                title: "Ocean Adventures",
-                thumbnail: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
-                snippet: "Diving into the mysteries of the sea.",
-                content: `
-                    <p class="mb-6 text-gray-800 dark:text-gray-200">The ocean holds countless mysteries beneath its surface, each wave concealing a world teeming with life and wonder. As a marine enthusiast, every dive brings new discoveries and unforgettable experiences.</p>
-                    
-                    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Beneath the Waves</h2>
-                    <p class="mb-6 text-gray-800 dark:text-gray-200">The moment you descend beneath the surface, you enter a different realm. The sounds of the world above fade away, replaced by the gentle hum of the ocean. Schools of fish move in perfect synchronization, while coral reefs create an underwater metropolis.</p>
-                    
-                    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Marine Life Encounters</h2>
-                    <p class="mb-6 text-gray-800 dark:text-gray-200">Each dive brings unexpected encounters. From playful dolphins to graceful sea turtles, the ocean's inhabitants never cease to amaze. These interactions remind us of the importance of marine conservation and protecting these delicate ecosystems.</p>
-                    
-                    <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Conservation Efforts</h2>
-                    <p class="mb-6 text-gray-800 dark:text-gray-200">As ocean enthusiasts, we have a responsibility to protect these underwater wonderlands. Climate change and pollution pose serious threats to marine life, making conservation efforts more crucial than ever. Every small action counts in preserving these precious ecosystems for future generations.</p>
-                `,
-                likes: 0,
-                comments: []
-            }
-        ];
-
-        // Function to render posts
-        function renderPosts() {
-            const grid = document.getElementById('blogGrid');
-            grid.innerHTML = '';
-
-            posts.forEach(post => {
-                const postElement = document.createElement('div');
-                postElement.className = 'post-card group bg-white/70 dark:bg-gray-800/70 backdrop-blur-md rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.02]';
-                postElement.innerHTML = `
-                    <img src="${post.thumbnail}" alt="${post.title}" class="w-full h-48 object-cover rounded-t-xl transition-transform duration-500 group-hover:scale-105">
-                    <div class="p-6 space-y-4">
-                        <h2 class="text-lg sm:text-xl lg:text-2xl font-bold text-indigo-800 dark:text-indigo-200 tracking-tight transition-all duration-200 group-hover:text-indigo-600 dark:group-hover:text-violet-400 group-hover:translate-x-1">${post.title}</h2>
-                        <p class="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed">${post.snippet}</p>
-                        <button class="read-more-btn w-full py-2 mt-4 bg-gradient-to-r from-indigo-600 to-cyan-custom text-white rounded-lg hover:opacity-90 transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" data-id="${post.id}">
-                            Read More
-                        </button>
-                    </div>
-                    <div class="flex justify-between items-center p-6 border-t border-gray-200/50 dark:border-gray-700/50">
-                        <button class="like-btn min-h-[44px] text-indigo-600 dark:text-violet-500 hover:text-indigo-400 dark:hover:text-violet-400 font-medium transition-all duration-200 hover:shadow-md active:scale-95 focus:outline-none focus-visible:ring-2 ring-indigo-500" data-id="${post.id}">Like (${post.likes})</button>
-                        <button class="comment-btn min-h-[44px] text-indigo-600 dark:text-violet-500 hover:text-indigo-400 dark:hover:text-violet-400 font-medium transition-all duration-200 hover:shadow-md active:scale-95 focus:outline-none focus-visible:ring-2 ring-indigo-500" data-id="${post.id}">Comments (${post.comments.length})</button>
-                        <button class="share-btn min-h-[44px] text-indigo-600 dark:text-violet-500 hover:text-indigo-400 dark:hover:text-violet-400 font-medium transition-all duration-200 hover:shadow-md active:scale-95 focus:outline-none focus-visible:ring-2 ring-indigo-500" data-id="${post.id}">Share</button>
-                    </div>
-                `;
-                grid.appendChild(postElement);
-            });
-
-            // Add intersection observer for scroll animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        // Optional: unobserve after animation
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '50px'
-            });
-
-            // Observe all post cards
-            document.querySelectorAll('.post-card').forEach(card => {
-                observer.observe(card);
-            });
-
-            // Add event listeners
-            addEventListeners();
-        }
-
-        // Add interactivity
-        function addEventListeners() {
-            // Like button
-            document.querySelectorAll('.like-btn').forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const postId = parseInt(this.dataset.id);
-                    const post = posts.find(p => p.id === postId);
-                    post.likes += 1;
-                    this.classList.add('animate-pulse');
-                    setTimeout(() => this.classList.remove('animate-pulse'), 300);
-                    this.textContent = `Like (${post.likes})`;
-                });
-            });
-
-            // Comment button
-            document.querySelectorAll('.comment-btn').forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const postId = parseInt(this.dataset.id);
-                    const post = posts.find(p => p.id === postId);
-                    showFullPost(post);
-                });
-            });
-
-            // Share button (simulated alert)
-            document.querySelectorAll('.share-btn').forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const postId = parseInt(this.dataset.id);
-                    const post = posts.find(p => p.id === postId);
-                    alert(`Sharing: ${post.title}`);
-                });
-            });
-
-            // Read More button
-            document.querySelectorAll('.read-more-btn').forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const postId = parseInt(this.dataset.id);
-                    const post = posts.find(p => p.id === postId);
-                    showFullPost(post);
-                });
-            });
-        }
-
-        // Add new function to show full post
-        function showFullPost(post) {
-            const currentIndex = posts.findIndex(p => p.id === post.id);
-            const hasPrevious = currentIndex > 0;
-            const hasNext = currentIndex < posts.length - 1;
-
-            const fullPostModal = document.createElement('div');
-            fullPostModal.className = 'fixed inset-0 z-50 overflow-y-auto';
-            fullPostModal.innerHTML = `
-                <!-- Backdrop -->
-                <div class="modal-backdrop fixed inset-0 bg-black/50 backdrop-blur-sm"></div>
-                
-                <!-- Modal -->
-                <div class="relative min-h-screen flex items-center justify-center p-4">
-                    <!-- Previous Button -->
-                    ${hasPrevious ? `
-                    <button class="prev-post fixed left-4 top-1/2 -translate-y-1/2 bg-gradient-to-r from-indigo-600 to-violet-500 text-white/80 hover:text-white w-32 px-4 py-3 rounded-full shadow-lg hover:shadow-indigo-500/25 hover:shadow-xl transition-all hover:scale-105 z-50 flex items-center justify-center gap-2 group backdrop-blur-sm" aria-label="Previous post">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                        <span class="font-medium opacity-0 group-hover:opacity-100 transition-all duration-200">Previous</span>
-                    </button>
-                    ` : ''}
-
-                    <!-- Next Button -->
-                    ${hasNext ? `
-                    <button class="next-post fixed right-4 top-1/2 -translate-y-1/2 bg-gradient-to-r from-indigo-600 to-violet-500 text-white/80 hover:text-white w-32 px-4 py-3 rounded-full shadow-lg hover:shadow-indigo-500/25 hover:shadow-xl transition-all hover:scale-105 z-50 flex items-center justify-center gap-2 group backdrop-blur-sm" aria-label="Next post">
-                        <span class="font-medium opacity-0 group-hover:opacity-100 transition-all duration-200">Next</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
-                    ` : ''}
-
-                    <div class="relative bg-gray-50 dark:bg-gray-900 w-full max-w-4xl rounded-2xl shadow-2xl">
-                        <!-- Close button -->
-                        <button type="button" class="modal-close fixed top-6 right-6 z-[60] text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-gray-200 p-4 rounded-full hover:bg-gray-200/70 dark:hover:bg-gray-800 transition-colors backdrop-blur-sm bg-white/10 dark:bg-black/10">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                        
-                        <!-- Content -->
-                        <article class="p-8 bg-gray-50 dark:bg-gray-900">
-                            <img src="${post.thumbnail}" alt="${post.title}" class="w-full h-[400px] object-cover rounded-xl mb-8">
-                            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">${post.title}</h1>
-                            
-                            <!-- Author info -->
-                            <div class="flex items-center gap-4 mb-8 text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800/50 p-4 rounded-lg">
-                                <div class="w-10 h-10 rounded-full bg-indigo-100 dark:bg-violet-900 flex items-center justify-center">
-                                    <span class="text-lg">✍️</span>
-                                </div>
-                                <div>
-                                    <div class="font-medium text-gray-900 dark:text-white">Anonymous Writer</div>
-                                    <div class="text-sm text-gray-700 dark:text-gray-300">Posted on ${new Date().toLocaleDateString()}</div>
-                                </div>
-                            </div>
-
-                            <!-- Content -->
-                            <div class="prose dark:prose-invert max-w-none 
-                                prose-headings:text-gray-900 prose-headings:dark:text-white 
-                                prose-p:text-gray-800 prose-p:dark:text-gray-200
-                                prose-strong:text-gray-900 prose-strong:dark:text-white
-                                prose-a:text-indigo-600 prose-a:dark:text-indigo-400
-                                prose-li:text-gray-800 prose-li:dark:text-gray-200
-                                prose-blockquote:text-gray-800 prose-blockquote:dark:text-gray-200
-                                bg-gray-50 dark:bg-gray-900">
-                                ${post.content}
-                            </div>
-                            
-                            <!-- Comments Section -->
-                            <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
-                                <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Comments (${post.comments.length})</h3>
-                                
-                                <!-- Comment Form -->
-                                <form class="comment-form space-y-3 mb-8" data-id="${post.id}">
-                                    <textarea 
-                                        placeholder="Write a comment..." 
-                                        class="w-full p-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-indigo-500 dark:focus:ring-violet-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                                        rows="2"
-                                    ></textarea>
-                                    <button type="submit" class="px-4 py-2 bg-indigo-600 dark:bg-violet-500 text-white rounded-lg hover:bg-indigo-700 dark:hover:bg-violet-600 transition-colors">
-                                        Post Comment
-                                    </button>
-                                </form>
-                                
-                                <!-- Comments List -->
-                                <div class="comments-list space-y-4">
-                                    ${post.comments.length > 0 ?
-                    post.comments.map(comment => `
-                                            <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
-                                                <div class="flex items-center gap-3 mb-2">
-                                                    <div class="w-8 h-8 rounded-full bg-indigo-100 dark:bg-violet-900 flex items-center justify-center">
-                                                        <span class="text-sm">👤</span>
-                                                    </div>
-                                                    <div class="font-medium text-gray-900 dark:text-white">Anonymous</div>
-                                                    <div class="text-xs text-gray-500 dark:text-gray-400">${new Date(comment.date).toLocaleString()}</div>
-                                                </div>
-                                                <p class="text-gray-700 dark:text-gray-300">${comment.text}</p>
-                                            </div>
-                                        `).join('')
-                    :
-                    '<p class="text-gray-500 dark:text-gray-400 text-center py-4">No comments yet. Be the first to comment!</p>'
-                }
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(fullPostModal);
-
-            // Add event listener for comment form submission
-            const commentForm = fullPostModal.querySelector('.comment-form');
-            if (commentForm) {
-                commentForm.addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    const postId = parseInt(this.dataset.id);
-                    const post = posts.find(p => p.id === postId);
-                    const commentText = this.querySelector('textarea').value.trim();
-
-                    if (commentText) {
-                        // Add the new comment
-                        post.comments.push({
-                            text: commentText,
-                            date: new Date().toISOString()
-                        });
-
-                        // Update the comments count in the modal
-                        const commentsHeading = fullPostModal.querySelector('h3');
-                        if (commentsHeading) {
-                            commentsHeading.textContent = `Comments (${post.comments.length})`;
-                        }
-
-                        // Update the comments list
-                        const commentsList = fullPostModal.querySelector('.comments-list');
-                        if (commentsList) {
-                            if (post.comments.length === 1) {
-                                // First comment, replace the "no comments" message
-                                commentsList.innerHTML = '';
-                            }
-
-                            const newComment = document.createElement('div');
-                            newComment.className = 'bg-gray-100 dark:bg-gray-800 p-4 rounded-lg';
-                            newComment.innerHTML = `
-                                <div class="flex items-center gap-3 mb-2">
-                                    <div class="w-8 h-8 rounded-full bg-indigo-100 dark:bg-violet-900 flex items-center justify-center">
-                                        <span class="text-sm">👤</span>
-                                    </div>
-                                    <div class="font-medium text-gray-900 dark:text-white">Anonymous</div>
-                                    <div class="text-xs text-gray-500 dark:text-gray-400">${new Date().toLocaleString()}</div>
-                                </div>
-                                <p class="text-gray-700 dark:text-gray-300">${commentText}</p>
-                            `;
-                            commentsList.prepend(newComment);
-                        }
-
-                        // Clear the textarea
-                        this.querySelector('textarea').value = '';
-
-                        // Update the comment count in the blog grid
-                        renderPosts();
-                    }
-                });
-            }
-
-            // Prevent body scrolling when modal is open
-            document.body.style.overflow = 'hidden';
-
-            // Close modal function
-            function closeModal() {
-                document.body.style.overflow = 'auto';
-                fullPostModal.remove();
-            }
-
-            // Close button click handler
-            const closeButton = fullPostModal.querySelector('.modal-close');
-            if (closeButton) {
-                closeButton.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    closeModal();
-                });
-            }
-
-            // Close on backdrop click
-            const backdrop = fullPostModal.querySelector('.modal-backdrop');
-            if (backdrop) {
-                backdrop.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    closeModal();
-                });
-            }
-
-            // Close on escape key
-            const escHandler = (e) => {
-                if (e.key === 'Escape') {
-                    closeModal();
-                    document.removeEventListener('keydown', escHandler);
-                }
-            };
-            document.addEventListener('keydown', escHandler);
-
-            // Previous post navigation
-            const prevButton = fullPostModal.querySelector('.prev-post');
-            if (prevButton) {
-                prevButton.addEventListener('click', () => {
-                    fullPostModal.remove();
-                    showFullPost(posts[currentIndex - 1]);
-                });
-
-                // Add keyboard shortcut for previous (left arrow)
-                document.addEventListener('keydown', function (e) {
-                    if (e.key === 'ArrowLeft' && hasPrevious) {
-                        prevButton.click();
-                    }
-                });
-            }
-
-            // Next post navigation
-            const nextButton = fullPostModal.querySelector('.next-post');
-            if (nextButton) {
-                nextButton.addEventListener('click', () => {
-                    fullPostModal.remove();
-                    showFullPost(posts[currentIndex + 1]);
-                });
-
-                // Add keyboard shortcut for next (right arrow)
-                document.addEventListener('keydown', function (e) {
-                    if (e.key === 'ArrowRight' && hasNext) {
-                        nextButton.click();
-                    }
-                });
-            }
-
-            // Add swipe navigation for touch devices
-            let touchStartX = 0;
-            let touchEndX = 0;
-
-            fullPostModal.addEventListener('touchstart', e => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-
-            fullPostModal.addEventListener('touchend', e => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            });
-
-            function handleSwipe() {
-                const swipeThreshold = 50; // minimum distance for swipe
-                const swipeDistance = touchEndX - touchStartX;
-
-                if (Math.abs(swipeDistance) > swipeThreshold) {
-                    if (swipeDistance > 0 && hasPrevious) {
-                        // Swipe right - go to previous
-                        prevButton?.click();
-                    } else if (swipeDistance < 0 && hasNext) {
-                        // Swipe left - go to next
-                        nextButton?.click();
-                    }
-                }
-            }
-        }
-
-        // Initial render
-        renderPosts();
-
-
-
         // Mobile menu functionality
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.querySelector('.menu-icon');
+        const closeIcon = document.querySelector('.close-icon');
+
         mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
             mobileMenu.classList.toggle('hidden');
-            document.querySelector('.menu-icon').classList.toggle('hidden');
-            document.querySelector('.close-icon').classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+            // Update aria-expanded for accessibility
+            mobileMenuBtn.setAttribute('aria-expanded', String(!isOpen));
+        });
+
+        // Optional: Close menu when a link is clicked (for better UX)
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Optional: Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (
+                !mobileMenu.contains(e.target) &&
+                !mobileMenuBtn.contains(e.target) &&
+                !mobileMenu.classList.contains('hidden')
+            ) {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            }
         });
 
         // Smooth scroll to contact section
@@ -1563,6 +1481,25 @@
                 });
             }
         }
+
+        // Smooth scroll for all anchor links that start with #
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href').slice(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Optionally close mobile menu if open
+                    if (window.innerWidth < 768 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
+                }
+            });
+        });
     </script>
 
     <style>
